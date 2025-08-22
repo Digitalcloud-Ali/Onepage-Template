@@ -69,8 +69,8 @@ Visit the live demo to see the template in action:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/digitalcloudno/onepage-template.git
-   cd onepage-template
+   git clone https://github.com/Digitalcloud-Ali/Onepage-Template.git
+   cd Onepage-Template
    ```
 
 2. **Upload to your web server**
@@ -199,7 +199,7 @@ We welcome contributions! Here's how you can help:
 
 1. **Clone your fork**
    ```bash
-   git clone https://github.com/digitalcloudno/onepage-template.git
+   git clone https://github.com/Digitalcloud-Ali/Onepage-Template.git
    ```
 
 2. **Install dependencies** (if any)
@@ -335,10 +335,10 @@ Need professional help with customization or deployment?
 
 ## 📊 Statistics
 
-- **Downloads**: [![Downloads](https://img.shields.io/github/downloads/digitalcloudno/onepage-template/total)](https://github.com/digitalcloudno/onepage-template)
-- **Stars**: [![Stars](https://img.shields.io/github/stars/digitalcloudno/onepage-template)](https://github.com/digitalcloudno/onepage-template)
-- **Forks**: [![Forks](https://img.shields.io/github/forks/digitalcloudno/onepage-template)](https://github.com/digitalcloudno/onepage-template)
-- **Issues**: [![Issues](https://img.shields.io/github/issues/digitalcloudno/onepage-template)](https://github.com/digitalcloudno/onepage-template)
+- **Downloads**: [![Downloads](https://img.shields.io/github/downloads/Digitalcloud-Ali/Onepage-Template/total)](https://github.com/Digitalcloud-Ali/Onepage-Template)
+- **Stars**: [![Stars](https://img.shields.io/github/stars/Digitalcloud-Ali/Onepage-Template)](https://github.com/Digitalcloud-Ali/Onepage-Template)
+- **Forks**: [![Forks](https://img.shields.io/github/forks/Digitalcloud-Ali/Onepage-Template)](https://github.com/Digitalcloud-Ali/Onepage-Template)
+- **Issues**: [![Issues](https://img.shields.io/github/issues/Digitalcloud-Ali/Onepage-Template)](https://github.com/Digitalcloud-Ali/Onepage-Template)
 
 ## 🌟 Showcase
 
@@ -354,7 +354,7 @@ Have you used this template? Show us your work!
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/digitalcloudno/onepage-template.git
+git clone https://github.com/Digitalcloud-Ali/Onepage-Template.git
 
 # 2. Upload to your web server
 

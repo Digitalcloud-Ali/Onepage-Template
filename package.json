@@ -1,0 +1,37 @@
+{
+  "name": "onepage-template",
+  "version": "2.0.0",
+  "description": "Modern one-page website template with updated security and functionality",
+  "main": "index.html",
+  "scripts": {
+    "dev": "php -S localhost:8000",
+    "build": "echo 'Build process can be added here'",
+    "lint": "echo 'Linting can be added here'",
+    "test": "echo 'Testing can be added here'"
+  },
+  "keywords": [
+    "template",
+    "onepage",
+    "website",
+    "modern",
+    "responsive"
+  ],
+  "author": "MasterGraphiks",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "php": ">=7.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/onepage-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/onepage-template/issues"
+  },
+  "homepage": "https://github.com/yourusername/onepage-template#readme"
+}

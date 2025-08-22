@@ -1,535 +1,498 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>MasterGraphiks - Custom Web Design, Development and Software Solution</title>
-	<meta name="description" content="Custom Web Design, Web Development and Software Solution, Graphics Design, Logo Design Service, SEO, Online Marketing and Much More at Cheap Rates."/>
-	<link rel="canonical" href="http://mastergraphiks.com/" />
-	<link rel="shortcut icon" href="http://mastergraphiks.com/favicon.ico" />
-	<meta property='og:locale' content='en_US'/>
-	<meta property='og:type' content='website'/>
-	<meta property='og:title' content='MasterGraphiks - Custom Web Design, Development and Software Solution'/>
-	<meta property='og:url' content='http://mastergraphiks.com/'/>
-	<meta property='og:site_name' content='MasterGraphiks'/>
-	<meta name="google-site-verification" content="zIOPd2FUFSPDbX615MjVBuAxAifHCEvNRE4ft5Cj7Uk" />
-	<meta name="msvalidate.01" content="49365977F6039D674C719868A5E279C1" />
-<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.0"></script>
-	<link rel="stylesheet" type="text/css" href="jquery.fancybox.css?v=2.1.0" media="screen" />
-<link href="style1366.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-			 *  Simple image gallery. Uses default settings
-			 */
-
-			$('.fancybox').fancybox();
-
-			/*
-			 *  Different effects
-			 */
-
-			// Change title type, overlay closing speed
-			$(".fancybox-effects-a").fancybox({
-				helpers: {
-					title : {
-						type : 'outside'
-					},
-					overlay : {
-						speedOut : 0
-					}
-				}
-			});
-
-			// Disable opening and closing animations, change title type
-			$(".fancybox-effects-b").fancybox({
-				openEffect  : 'none',
-				closeEffect	: 'none',
-
-				helpers : {
-					title : {
-						type : 'over'
-					}
-				}
-			});
-
-			// Set custom style, close if clicked, change title type and overlay color
-			$(".fancybox-effects-c").fancybox({
-				wrapCSS    : 'fancybox-custom',
-				closeClick : true,
-
-				openEffect : 'none',
-
-				helpers : {
-					title : {
-						type : 'inside'
-					},
-					overlay : {
-						css : {
-							'background' : 'rgba(238,238,238,0.85)'
-						}
-					}
-				}
-			});
-
-			// Remove padding, set opening and closing animations, close if clicked and disable overlay
-			$(".fancybox-effects-d").fancybox({
-				padding: 0,
-
-				openEffect : 'elastic',
-				openSpeed  : 150,
-
-				closeEffect : 'elastic',
-				closeSpeed  : 150,
-
-				closeClick : true,
-
-				helpers : {
-					overlay : null
-				}
-			});
-
-			/*
-			 *  Button helper. Disable animations, hide close button, change title type and content
-			 */
-
-			$('.fancybox-buttons').fancybox({
-				openEffect  : 'none',
-				closeEffect : 'none',
-
-				prevEffect : 'none',
-				nextEffect : 'none',
-
-				closeBtn  : false,
-
-				helpers : {
-					title : {
-						type : 'inside'
-					},
-					buttons	: {}
-				},
-
-				afterLoad : function() {
-					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
-				}
-			});
-
-
-			/*
-			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
-			 */
-
-			$('.fancybox-thumbs').fancybox({
-				prevEffect : 'none',
-				nextEffect : 'none',
-
-				closeBtn  : false,
-				arrows    : false,
-				nextClick : true,
-
-				helpers : {
-					thumbs : {
-						width  : 50,
-						height : 50
-					}
-				}
-			});
-
-			/*
-			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
-			*/
-			$('.fancybox-media')
-				.attr('rel', 'media-gallery')
-				.fancybox({
-					openEffect : 'none',
-					closeEffect : 'none',
-					prevEffect : 'none',
-					nextEffect : 'none',
-
-					arrows : false,
-					helpers : {
-						media : {},
-						buttons : {}
-					}
-				});
-
-			/*
-			 *  Open manually
-			 */
-
-			$("#fancybox-manual-a").click(function() {
-				$.fancybox.open('1_b.jpg');
-			});
-
-			$("#fancybox-manual-b").click(function() {
-				$.fancybox.open({
-					href : 'iframe.html',
-					type : 'iframe',
-					padding : 5
-				});
-			});
-
-			$("#fancybox-manual-c").click(function() {
-				$.fancybox.open([
-					{
-						href : '1_b.jpg',
-						title : 'My title'
-					}, {
-						href : '2_b.jpg',
-						title : '2nd title'
-					}, {
-						href : '3_b.jpg'
-					}
-				], {
-					helpers : {
-						thumbs : {
-							width: 75,
-							height: 50
-						}
-					}
-				});
-			});
-
-
-		});
-	</script>
-	<style type="text/css">
-		.fancybox-custom .fancybox-skin {
-			box-shadow: 0 0 50px #222;
-		}
-	</style>
-        			<!--[if IE]>
-			     <style type="text/css">
-			         .timer { display: none !important; }
-			         div.caption { background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);zoom: 1; }
-			    </style>
-			<![endif]-->
-
-<script type="text/javascript">// <![CDATA[
-$(document).ready(function() {
-  function filterPath(string) {
-    return string
-      .replace(/^\//,'')
-      .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-      .replace(/\/$/,'');
-  }
-  $('a[href*=#]').each(function() {
-    if ( filterPath(location.pathname) == filterPath(this.pathname)
-    && location.hostname == this.hostname
-    && this.hash.replace(/#/,'') ) {
-      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
-      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
-       if ($target) {
-         var targetOffset = $target.offset().top;
-         $(this).click(function() {
-           $('html, body').animate({scrollTop: targetOffset}, 600);
-           return false;
-         });
-      }
-    }
-  });
-});
-// ]]></script>
-<!--[if lte IE 8]>
-	<link href="styleIE.css" rel="stylesheet" type="text/css">
-    <div style="text-align:center; background-color:#ff9900; font-size:1em; ">This website is best viewed in Internet Explorer 9 or above. Please upgrade your browser. <a href="http://windows.microsoft.com/en-US/internet-explorer/downloads/ie-9/worldwide-languages" target="_blank">Click Here</a> </div>
-<![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterGraphiks - Custom Web Design, Development and Software Solution</title>
+    <meta name="description" content="Custom Web Design, Web Development and Software Solution, Graphics Design, Logo Design Service, SEO, Online Marketing and Much More at Cheap Rates."/>
+    <link rel="canonical" href="http://mastergraphiks.com/" />
+    <link rel="shortcut icon" href="http://mastergraphiks.com/favicon.ico" />
+    <meta property='og:locale' content='en_US'/>
+    <meta property='og:type' content='website'/>
+    <meta property='og:title' content='MasterGraphiks - Custom Web Design, Development and Software Solution'/>
+    <meta property='og:url' content='http://mastergraphiks.com/'/>
+    <meta property='og:site_name' content='MasterGraphiks'/>
+    <meta name="google-site-verification" content="zIOPd2FUFSPDbX615MjVBuAxAifHCEvNRE4ft5Cj7Uk" />
+    <meta name="msvalidate.01" content="49365977F6039D674C719868A5E279C1" />
+    
+    <!-- Modern JavaScript and CSS -->
+    <script src="js/modern.js" defer></script>
+    <link href="style-modern.css" rel="stylesheet" type="text/css">
+    
+    <!-- CSRF Token for forms -->
+    <meta name="csrf-token" content="<?php echo generate_csrf_token(); ?>">
 </head>
 <body>
-<div id="homepage">
-     <a name="home"></a>
-  <div class="logoarea"><img id="mainlogo" src="images/logo.png" width="341" height="167" alt="logo">
-  </div>
-           <br>
-  <ul class="ca-menu menue">
-                    <li id="li1">
-                        <a href="#about">
-                            <div class="ca-content">
-                            <img src="images/about1.png" width="64" height="64" alt="about" border=0>
-                            <h2 class="ca-main">About</h2>
-                                <h3 class="ca-sub">Who We Are?</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li id="li2">
-                        <a href="#service">
-                            
-<div class="ca-content">
-			
-          <img src="images/services.png" width="64" height="64" alt="services" border=0>
-            <h2 class="ca-main">Services</h2>
-            <h3 class="ca-sub">What We Do?</h3>
-          </div>
-                        </a>
-                    </li>
-                    <li id="li3">
-                        <a href="#portfolio">
-                            
-                            <div class="ca-content">
-                            <img src="images/portfolio.png" width="64" height="64" alt="about" border=0>
-                                <h2 class="ca-main">Portfolio</h2>
-                                <h3 class="ca-sub">See Our Work</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li id="li4">
-                        <a href="#raq">
-                           
-                            <div class="ca-content">
-                            <img src="images/raq.png" width="64" height="64" alt="about" border=0>
-                                <h2 class="ca-main">RAQ</h2>
-                                <h3 class="ca-sub">Request A Quote</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li id="li5">
-                        <a href="#support">
-                            
-                            <div class="ca-content">
-                            <img src="images/support.png" width="64" height="64" alt="about" border=0>
-                                <h2 class="ca-main">Support</h2>
-                                <h3 class="ca-sub">24/7 Available</h3>
-                            </div>
-                        </a>
-                    </li>
-  </ul>
-  <div class="texthome">
-"We code your Dreams into Reality"
-  </div>
-           <div class="homesub">A Team of Designers, Developers & Software Solution Providers</div>
-</div>  
-
-</div>
-
-<div id="aboutpage">
-     <a name="about"></a>
-  <div class="abouthead">
-  <img src="images/about1.png" width="128" height="128" alt="aboutdark"></div>
-  <div id="aboutheadtext">Who We Are</div>
-  <div id="aboutwrapper">
-           <article class="aboutsub">
-             <p>MasterGraphiks is a team of designers and developers that is engaged in providing various design and development services to its customers. A good and attractive design can turn a potential customer into your customer. So, our designers come up with unique and creative ideas and transform them to eye-catching, attactive & user friendly web and graphic designs.</p>
-<p>Our skilled developers, on other hand, code Web Applications as well as PC Software Applications for small business organizations that help them to boost up their business in more easier and modren way.</p>
-</article>
-</div>
-
-<div id="servicespage"><a name="service"></a>
-
-			<div class="sitems">
-<ul>
-<a href="#wdesign"><li id="li1">Web Design</li></a>
-<a href="#omark"><li id="li2">Online Marketing</li></a>
-<a href="#gdesign"><li id="li3">Graphics Design</li></a>
-<a href="#ldesign"><li id="li4">Logo Design</li></a>
-<a href="#ssols"><li id="li5">Software Solutions</li></a>
-<a href="#seo"><li id="li6">SEO</li></a>
-<a href="#cms"><li id="li7">CMS</li></a>
-<a href="#wdev"><li id="li8">Web Development</li></a>
-<a href="#whost"><li id="li9">Web Hosting</li></a>
-</ul>
-			</div>
-				<div class="simghead">
-					<div class="simg"><img id="serviceimg" src="images/servicesdark.png" width="128" height="128" alt="sim"></div>
-						<div class="shead">What We Do</div>
-                </div>
-</div>
-<div id="serdetail">
-
-<div id="sd1">
-<a name="wdesign"></a>
-<div id="sdimg"><img src="images/wdesign.png"></div>
-<article id="sdarticle">
-An eye-catching, beautiful and attractive design means more attention which in turn brings more customers/visitors to your website. We design high quality & minimalistic designs that greatly enhances the look of your website, making it attractive yet user friendly.
-<p>A beautiful design can simplify and convert a complex and hard to understand user interface into a very easy to handle, simple and attractive user interface that brings back the visitors and customers to your site in future. That is what we aim to achieve while designing web as well as PC based user interfaces.</p>
-<p>Our affordable price is what makes us different. We offer high quality design services at very low price.</p>
-</article>
-</div>
-<div id="sd2">
-<a name="gdesign"></a>
-<div id="sdimg"><img src="images/gdesign.png" ></div>
-<article id="sdarticle">If you're looking for good and professional, cutting edge graphic designs that match your company's identity you are at right place.<br> We offer the following graphics design services:<br><br> Brochures, Business Cards, Calendars, Catalogs / Booklets, CD/DVD Sleeves, Club Card Flyers, Door Hangers, Envelopes, Event Tickets, Greeting Cards, Letterhead, Newsletters, Postcards, Posters, Presentation Folders, Rack Cards & Stickers.
-</article></div>
-<div id="sd3">
-<a name="ssols"></a>
-<div id="sdimg"><img src="images/ssolutions.png" ></div>
-<article id="sdarticle">Are you looking for competent custom software solution for your business? Yes we develop business software solutions for small and medium level organizatons. Rising competition in IT industry has given rise to desire of custom software development that requires an in depth proficiency of developers and flexible yet structured methodology to create high quality software development solutions with tactical differentiation and operational superiority. We believe in increasing competitiveness in the global scenario by offering:
-<ul>
-<li>Experienced, skilled, highly qualified and technically proficient staff dedicated to your project</li>
-<li>Full cycle software development process, right from product design and offshore software development to outsourcing application support, maintenance and enhancement</li>
-<li>Cutting down and integration of multiple process initiatives, Unparalleled speed of execution, Reduction of development costs</li>
-<li>Compression of development time.</li>
-</ul>
-</article></div>
-<div id="sd4">
-<a name="wdev"></a>
-<div id="sdimg"><img src="images/wdev.png" ></div>
-<article id="sdarticle">Are you looking for Web Development Resources? to build or upgrade your website design, implement new design, add e-commerce capability, add effective marketing tools and services, build custom online applications, build or clean your customer database or your website database, or upgrade your website content for SEO effectiveness? then you are in right place.<br><br> Here at MasterGraphiks we offer quality web development services at low cost and less development time duration. Our skilled development team focuses strictly on quality of code rather than quantity. So our web development work is of professional quality with an affordable price tag.<br> We develop custom as well as CMS based web applications for our customers. If you are interested, request us a quote.
-</article></div>
-<div id="sd5">
-<a name="omark"></a>
-<div id="sdimg"><img src="images/omarket.png"></div>
-<article id="sdarticle">We offer the online marketing solutions to our customers, either it is search engine based marketing, social network marketing or advertisement.<br>For instance, if you have just started a new business and you want people to hear about it on social networks like facebook, Google plus and LinkedIn, blogs, forums and other web communities, then all you need is an effective online marketing solution.<br> Our cost and time effective online marketing services will popularize your business on social networks, forums, blogs and other web based communities so that your business gets its start up boost.</article></div>
-<div id="sd6">
-<a name="ldesign"></a>
-<div id="sdimg"><img src="images/ldesign.png"></div>
-<article id="sdarticle">Logo is identity of your business or brand. A good business or brand logo is one which is eye-catching
-and easy to memorize.<br>If you are looking for a attractive logo design which is combination of creativity, innovaiton and remarkable visual design then give us a try. Our designers at MasterGraphiks create such eye-catching, beautiful and easy to memorize logos for your business or brand to give it a boost.</article></div>
-<div id="sd7">
-<a name="seo"></a>
-<div id="sdimg"><img src="images/seo.png" ></div>
-<article id="sdarticle">MasterGraphiks Search Engine Optimization services help your online business or website maximize its profits by bringing high level of targeted traffic to your website which will greatly boost the sales potential of your website.
-<br> <br>We use various SEO techniques to strengthen your website's rank in search engines so that internet searchers can easily search, find and visit your website easily.
-</article></div>
-<div id="sd8">
-<a name="whost"></a>
-<div id="sdimg"><img src="images/whost.png" ></div>
-<article id="sdarticle">Are you looking for web hosting solution and scared of picking up the wrong hosting for your product? Then we are here to help you picking up the right web hosting solution for your products, websites, databases, or video streaming. We will give you the best ideas and plans of purchasing very low cost hosting.<br><br> We have our own Linux servers that we offer only to our customers who purchase software solution or website solution from us.</article></div>
-<div id="sd9">
-<a name="cms"></a>
-<div id="sdimg"><img src="images/cms.png"></div>
-<article id="sdarticle">Content Management System is a perfect online software solution for any website, company website, e-commerce, shopping solution, school ,colleges, hotels and for almost any other field. 
-
-<br>You can get your own custom content management system according to your requirements.<br><br> We have a professional Web designing / Development team 
-that will build real time online and offline content management solutions using modren programming languages such as PHP, ASP, C#, etc. We will give you the low cost CMS which has security, reliability user friendly interface built into it.</article></div>
-
-</div>
-
-<div id="portfoliopage">
-     <a name="portfolio"></a>
-     <div id="portdes">
-        <img id="pgreen" src="images/portfolio.png" width="128" height="128">
-  <div id="porthead">Our Work</div>
-  <div id="portcont">
-		<a class="fancybox-effects-d" href="images/mbwt-b.jpg" title="http://www.mbwtrust.org/">
-        <img src="images/mbwt-s.jpg" alt=""/></a>
-        <a class="fancybox-effects-d" href="images/sss-b.jpg" title="http://www.sssoutsources.com/">
-        <img src="images/sss-s.jpg" alt=""/></a>
-        <a class="fancybox-effects-d" href="images/kaneb-b.jpg" title="http://kanebrown.com/">
-        <img src="images/kaneb-s.jpg" alt=""/></a>
-		<a class="fancybox-effects-d" href="images/esea-b.jpg" title="http://www.eseacruising.com/">
-        <img src="images/esea-s.jpg" alt=""/></a>
-		<a class="fancybox-effects-d" href="images/et-b.jpg" title="http://elizabethtoni.com/">
-        <img src="images/et-s.jpg" alt=""/></a>
-        <a class="fancybox-effects-d" href="images/pt-b.jpg" title="http://primetimeinternational.tv/">
-        <img src="images/pt-s.jpg" alt=""/></a>
-        <a class="fancybox-effects-d" href="images/lsqtv-b.jpg" title="http://lsq.tv/">
-        <img src="images/lsqtv-s.jpg" alt=""/></a>
-        <a class="fancybox-effects-d" href="images/elastic-b.jpg" title="http://elasticarmy.com/">
-        <img src="images/elastic-s.jpg" alt=""/></a>
-        <a class="fancybox-effects-d" href="images/timnow-b.jpg" title="http://www.timnow.com/">
-        <img src="images/timnow-s.jpg" alt=""/></a>
+    <!-- Home Section -->
+    <div id="homepage">
+        <div class="simple-logo">
+            <h1>MasterGraphiks</h1>
         </div>
- </div>  
-</div>
+        
+        <ul class="ca-menu menue">
+            <li id="li0">
+                <a href="#homepage">
+                    <div class="ca-content">
+                        <img src="images/home.png" width="64" height="64" alt="Home">
+                        <h2 class="ca-main">Home</h2>
+                        <h3 class="ca-sub">Back to Top</h3>
+                    </div>
+                </a>
+            </li>
+            <li id="li1">
+                <a href="#aboutpage">
+                    <div class="ca-content">
+                        <img src="images/about1.png" width="64" height="64" alt="About Us">
+                        <h2 class="ca-main">About</h2>
+                        <h3 class="ca-sub">Who We Are?</h3>
+                    </div>
+                </a>
+            </li>
+            <li id="li2">
+                <a href="#servicespage">
+                    <div class="ca-content">
+                        <img src="images/services.png" width="64" height="64" alt="Our Services">
+                        <h2 class="ca-main">Services</h2>
+                        <h3 class="ca-sub">What We Do?</h3>
+                    </div>
+                </a>
+            </li>
+            <li id="li3">
+                <a href="#portfoliopage">
+                    <div class="ca-content">
+                        <img src="images/portfolio.png" width="64" height="64" alt="Our Portfolio">
+                        <h2 class="ca-main">Portfolio</h2>
+                        <h3 class="ca-sub">See Our Work</h3>
+                    </div>
+                </a>
+            </li>
+            <li id="li4">
+                <a href="#reqaquopage">
+                    <div class="ca-content">
+                        <img src="images/raq.png" width="64" height="64" alt="Request Quote">
+                        <h2 class="ca-main">RAQ</h2>
+                        <h3 class="ca-sub">Request A Quote</h3>
+                    </div>
+                </a>
+            </li>
+            <li id="li5">
+                <a href="#supportpage">
+                    <div class="ca-content">
+                        <img src="images/support.png" width="64" height="64" alt="Support">
+                        <h2 class="ca-main">Support</h2>
+                        <h3 class="ca-sub">24/7 Available</h3>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="texthome">
+            "We code your Dreams into Reality"
+        </div>
+        <div class="homesub">A Team of Designers, Developers & Software Solution Providers</div>
+    </div>
 
-<div id="reqaquopage">
-     <a name="raq"></a>
-<div id="raqhead">
-<img src="images/raq.png" width="128" height="128">
-<div>Request a Quote</div>
-</div>
-         <div id="formwrapper">
-         <div id="formbefore">
-                  <div class="formbars">
-         <div id="fbar1"></div>
-         <div id="fbar2"></div>
-         <div id="fbar3"></div>
-         <div id="fbar4"></div>
-         </div>
-         <div class="fcircles">
-         <div id="fc1">Name</div>
-         <div id="fc2">Country</div>
-         <div id="fc3">Budget</div>
-         <div id="fc4">Message</div>
-         </div>
+    <!-- About Section -->
+    <div id="aboutpage">
+        <div class="section-header">
+            <div class="section-icon">👥</div>
+            <h2>Who We Are</h2>
+            <p>Discover the team behind MasterGraphiks</p>
+        </div>
+        <div id="aboutwrapper">
+            <article class="aboutsub">
+                <p>MasterGraphiks is a team of designers and developers that is engaged in providing various design and development services to its customers. A good and attractive design can turn a potential customer into your customer. So, our designers come up with unique and creative ideas and transform them to eye-catching, attractive & user friendly web and graphic designs.</p>
+                <p>Our skilled developers, on other hand, code Web Applications as well as PC Software Applications for small business organizations that help them to boost up their business in more easier and modern way.</p>
+            </article>
+        </div>
+    </div>
 
-         </div>
-         <div id="raqform">
-         <form action="includes/raq_proc.php" method="post" target="_blank" id="formreq">
-			<input name="name" type="text" id="name" placeholder="Enter your name" required />
+    <!-- Services Section -->
+    <div id="servicespage">
+        <div class="section-header">
+            <div class="section-icon">⚡</div>
+            <h2>What We Do</h2>
+            <p>Comprehensive digital solutions for your business</p>
+        </div>
+    </div>
 
-            <input name="email" type="email" id="email" placeholder="youremail@example.com" required />
+    <!-- Service Details - Modern Redesign -->
+    <div id="serdetail">
+        <div class="service-grid">
+            <!-- Web Design -->
+            <div class="service-card" id="wdesign">
+                <div class="service-icon">
+                    <img src="images/wdesign.png" alt="Web Design">
+                </div>
+                <div class="service-content">
+                    <h3>Web Design</h3>
+                    <p>We create eye-catching, beautiful and attractive designs that bring more customers to your website. Our high-quality, minimalistic designs enhance your website's look while maintaining user-friendliness.</p>
+                    <p>We transform complex interfaces into simple, attractive, and easy-to-handle user experiences that keep visitors coming back.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Responsive Design</span>
+                        <span class="feature-tag">User Experience</span>
+                        <span class="feature-tag">Modern UI/UX</span>
+                    </div>
+                </div>
+            </div>
 
-            <input name="country" type="text" id="country" placeholder="Where do you live?" required />
+            <!-- Online Marketing -->
+            <div class="service-card" id="omark">
+                <div class="service-icon">
+                    <img src="images/omarket.png" alt="Online Marketing">
+                </div>
+                <div class="service-content">
+                    <h3>Online Marketing</h3>
+                    <p>Comprehensive online marketing solutions including search engine marketing, social network marketing, and strategic advertising campaigns.</p>
+                    <p>We help new businesses gain visibility on Facebook, Google Plus, LinkedIn, blogs, forums, and other web communities to boost your startup success.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Social Media</span>
+                        <span class="feature-tag">SEO Marketing</span>
+                        <span class="feature-tag">Brand Awareness</span>
+                    </div>
+                </div>
+            </div>
 
-            <select name="scope" id="scope" placeholder="Select">
-            <option>Scope of Project</option>
-            <option>Web Design</option>
-            <option>Web Development</option>
-            <option>Web Design & Development</option>
-            <option>Logo/Graphic Design</option>
-            <option>PC Software Solution</option>
-            </select>
+            <!-- Graphics Design -->
+            <div class="service-card" id="gdesign">
+                <div class="service-icon">
+                    <img src="images/gdesign.png" alt="Graphics Design">
+                </div>
+                <div class="service-content">
+                    <h3>Graphics Design</h3>
+                    <p>Professional, cutting-edge graphic designs that perfectly match your company's identity and brand vision.</p>
+                    <div class="service-list">
+                        <h4>Our Services Include:</h4>
+                        <ul>
+                            <li>Brochures, Business Cards, Calendars</li>
+                            <li>Catalogs, Booklets, CD/DVD Sleeves</li>
+                            <li>Flyers, Door Hangers, Envelopes</li>
+                            <li>Event Tickets, Greeting Cards, Letterhead</li>
+                            <li>Newsletters, Postcards, Posters</li>
+                            <li>Presentation Folders, Rack Cards & Stickers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-            <select name="budget" id="budget" placeholder="Select your budget">
-            <option>Select Your Budget</option>
-            <option>1000 to 15000</option>
-            <option>16000 to 20000</option>
-            <option>20000 to 30000</option>
-            <option>30000 to 50000</option>
-            <option>50000 plus</option>
-            </select>
+            <!-- Logo Design -->
+            <div class="service-card" id="ldesign">
+                <div class="service-icon">
+                    <img src="images/ldesign.png" alt="Logo Design">
+                </div>
+                <div class="service-content">
+                    <h3>Logo Design</h3>
+                    <p>Your logo is the identity of your business or brand. We create eye-catching, memorable logos that combine creativity, innovation, and remarkable visual design.</p>
+                    <p>Our designers at MasterGraphiks create logos that are not just beautiful but also strategically designed to boost your brand recognition and business growth.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Brand Identity</span>
+                        <span class="feature-tag">Creative Design</span>
+                        <span class="feature-tag">Memorable</span>
+                    </div>
+                </div>
+            </div>
 
-            <select name="time" id="time" placeholder="Select">
-             <option>Select Timeframe</option>
-            <option>urgent</option>
-            <option>1 week</option>
-            <option>1 month</option>
-            <option>6 months</option>
-            <option>A year or more</option>
-            </select>
-			<textarea name="msg" id="msg" placeholder="Enter Your Message Here" required></textarea>
-            <input type="submit" value="Send"/>
-         </form>
-         </div>
+            <!-- Software Solutions -->
+            <div class="service-card" id="ssols">
+                <div class="service-icon">
+                    <img src="images/ssolutions.png" alt="Software Solutions">
+                </div>
+                <div class="service-content">
+                    <h3>Software Solutions</h3>
+                    <p>Custom software solutions for small and medium organizations. We develop high-quality software with tactical differentiation and operational superiority.</p>
+                    <div class="service-list">
+                        <h4>What We Offer:</h4>
+                        <ul>
+                            <li>Experienced, skilled, and technically proficient development team</li>
+                            <li>Full-cycle software development process</li>
+                            <li>Offshore development and application support</li>
+                            <li>Cost-effective and time-efficient solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-         <div id="formafter">
-                  <div class="formbars2">
-         <div id="fbar12"></div>
-         <div id="fbar22"></div>
-         <div id="fbar32"></div>
-         <div id="fbar42"></div>
-         </div>
-         <div class="fcircles2">
-         <div id="fc12">Email</div>
-         <div id="fc22">Scope</div>
-         <div id="fc32">Timeframe</div>
-         <div id="fc42">Send</div>
-         </div>
-         
-         </div>
-         
-         </div>
-</div>
-<div id="supportpage">
-     <a name="support"></a>
-     <div id="s2img"><img src="images/support.png" width="128" height="128"></div>
-  <img id="cloud1" src="images/cloud.png">
-  <img id="cloud2" src="images/cloud2.png">
-  <div id="supporthead">Support</div>
-          <div id="swrapper">
-          <form action="includes/cont_proc.php" method="post" target="_blank" id="supportform">
-          <input name="name" type="text" id="name" placeholder="Name" required />
-          <input name="email" type="email" id="email" placeholder="youremail@example.com" required />
-          <input name="website" type="text" id="website" placeholder="Your Website" required />
-          <textarea name="msg" id="msg" placeholder="Enter Your Message Here" required ></textarea>
-          <input type="submit" value="Submit"/>
-          </form><div id="contactinfo">
-          <div id="imgcont">
-          <img src="images/phone.png">
-          <img src="images/email.png">
-          <img src="images/address.png">
-         		 </div>
-                           <div id="textcont">
-				<div>0321-470-8525<br>0345-547-2822</div>
-                <div>ask@mastergraphiks.com</div>
-                <div>MasterGraphiks Office @<br> Chowk Shahidan<br> Mirpur AJK<br>Pakistan</div>
-          </div>
-          </div>
-          <div id="map"></div>
-          
-  </div>
-  
-</div>
-<div id="copyright">&copy; MasterGraphiks.com 2013. All Rights Reserved</div>
+            <!-- SEO Services -->
+            <div class="service-card" id="seo">
+                <div class="service-icon">
+                    <img src="images/seo.png" alt="SEO Services">
+                </div>
+                <div class="service-content">
+                    <h3>Search Engine Optimization</h3>
+                    <p>Our SEO services help maximize your website's profits by bringing high levels of targeted traffic, greatly boosting your sales potential.</p>
+                    <p>We use advanced SEO techniques to strengthen your website's search engine rankings, making it easy for potential customers to find and visit your site.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Keyword Optimization</span>
+                        <span class="feature-tag">Traffic Growth</span>
+                        <span class="feature-tag">Search Rankings</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CMS Solutions -->
+            <div class="service-card" id="cms">
+                <div class="service-icon">
+                    <img src="images/cms.png" alt="CMS Solutions">
+                </div>
+                <div class="service-content">
+                    <h3>Content Management System</h3>
+                    <p>Perfect CMS solutions for websites, e-commerce, schools, colleges, hotels, and virtually any other field requiring content management.</p>
+                    <p>We build custom CMS solutions using modern programming languages (PHP, ASP, C#) with built-in security, reliability, and user-friendly interfaces.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Custom CMS</span>
+                        <span class="feature-tag">Security</span>
+                        <span class="feature-tag">User-Friendly</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Development -->
+            <div class="service-card" id="wdev">
+                <div class="service-icon">
+                    <img src="images/wdev.png" alt="Web Development">
+                </div>
+                <div class="service-content">
+                    <h3>Web Development</h3>
+                    <p>Comprehensive web development services including website upgrades, e-commerce implementation, custom applications, database management, and SEO optimization.</p>
+                    <p>We focus on code quality over quantity, delivering professional-grade web applications with affordable pricing and faster development times.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Custom Development</span>
+                        <span class="feature-tag">E-commerce</span>
+                        <span class="feature-tag">Database Management</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Hosting -->
+            <div class="service-card" id="whost">
+                <div class="service-icon">
+                    <img src="images/whost.png" alt="Web Hosting">
+                </div>
+                <div class="service-content">
+                    <h3>Web Hosting</h3>
+                    <p>Expert guidance in choosing the right web hosting solution for your websites, databases, and video streaming needs.</p>
+                    <p>We offer our own Linux servers exclusively to customers who purchase our software or website solutions, ensuring optimal performance and reliability.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Linux Servers</span>
+                        <span class="feature-tag">Performance</span>
+                        <span class="feature-tag">Reliability</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div id="portfoliopage">
+        <div class="section-header">
+            <div class="section-icon">🎨</div>
+            <h2>Our Work</h2>
+            <p>Showcasing our creative portfolio</p>
+        </div>
+        <div id="portcont">
+            <a class="fancybox-effects-d" href="images/mbwt-b.jpg" title="http://www.mbwtrust.org/">
+                <img src="images/mbwt-s.jpg" alt="MBWT Trust"/>
+            </a>
+            <a class="fancybox-effects-d" href="images/sss-b.jpg" title="http://www.sssoutsources.com/">
+                <img src="images/sss-s.jpg" alt="SSS Outsources"/>
+            </a>
+            <a class="fancybox-effects-d" href="images/kaneb-b.jpg" title="http://kanebrown.com/">
+                <img src="images/kaneb-s.jpg" alt="Kane Brown"/>
+            </a>
+            <a class="fancybox-effects-d" href="images/esea-b.jpg" title="http://www.eseacruising.com/">
+                <img src="images/esea-s.jpg" alt="ESEA Cruising"/>
+            </a>
+            <a class="fancybox-effects-d" href="images/et-b.jpg" title="http://elizabethtoni.com/">
+                <img src="images/et-s.jpg" alt="Elizabeth Toni"/>
+            </a>
+            <a class="fancybox-effects-d" href="images/pt-b.jpg" title="http://primetimeinternational.tv/">
+                <img src="images/pt-s.jpg" alt="Prime Time International"/>
+            </a>
+            <a class="fancybox-effects-d" href="images/lsqtv-b.jpg" title="http://lsq.tv/">
+                <img src="images/lsqtv-s.jpg" alt="LSQ TV"/>
+            </a>
+            <a class="fancybox-effects-d" href="images/elastic-b.jpg" title="http://elasticarmy.com/">
+                <img src="images/elastic-s.jpg" alt="Elastic Army"/>
+            </a>
+            <a class="fancybox-effects-d" href="images/timnow-b.jpg" title="http://www.timnow.com/">
+                <img src="images/timnow-s.jpg" alt="Tim Now"/>
+            </a>
+        </div>
+    </div>
+
+    <!-- RAQ Section - Compact & Elegant Design -->
+    <div id="reqaquopage">
+        <div class="section-header">
+            <div class="section-icon">💬</div>
+            <h2>Request a Quote</h2>
+            <p>Get a customized quote for your project</p>
+        </div>
+        
+        <div class="raq-container">
+            <div class="raq-form-section">
+                <form action="includes/raq_proc.php" method="post" id="formreq" class="compact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input name="name" type="text" id="name" class="form-control" placeholder="Full Name *" required />
+                        </div>
+                        <div class="form-group">
+                            <input name="email" type="email" id="email" class="form-control" placeholder="Email Address *" required />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <select name="scope" id="scope" class="form-control" required>
+                                <option value="">Project Type *</option>
+                                <option value="Web Design">Web Design</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="Web Design & Development">Web Design & Development</option>
+                                <option value="Logo/Graphic Design">Logo/Graphic Design</option>
+                                <option value="PC Software Solution">PC Software Solution</option>
+                                <option value="SEO Services">SEO Services</option>
+                                <option value="CMS Development">CMS Development</option>
+                                <option value="Online Marketing">Online Marketing</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="budget" id="budget" class="form-control" required>
+                                <option value="">Budget Range *</option>
+                                <option value="Under $1,000">Under $1,000</option>
+                                <option value="$1,000 - $5,000">$1,000 - $5,000</option>
+                                <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                                <option value="$10,000 - $25,000">$10,000 - $25,000</option>
+                                <option value="$25,000 - $50,000">$25,000 - $50,000</option>
+                                <option value="$50,000+">$50,000+</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <textarea name="msg" id="msg" class="form-control" placeholder="Describe your project briefly... *" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Get Free Quote</span>
+                            <span class="btn-icon">→</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="raq-info-section">
+                <div class="info-card primary">
+                    <div class="info-icon">📋</div>
+                    <h4>Why Choose Us?</h4>
+                    <ul>
+                        <li>Free consultation & analysis</li>
+                        <li>Detailed project breakdown</li>
+                        <li>Transparent pricing</li>
+                        <li>24h response time</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card secondary">
+                    <div class="info-icon">⚡</div>
+                    <h4>Quick Contact</h4>
+                    <div class="contact-quick">
+                        <div class="contact-item">
+                            <strong>📞 Phone:</strong><br>
+                            0321-470-8525<br>
+                            0345-547-2822
+                        </div>
+                        <div class="contact-item">
+                            <strong>📧 Email:</strong><br>
+                            ask@mastergraphiks.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>📍 Address:</strong><br>
+                            Chowk Shahidan, Mirpur AJK, Pakistan
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Support Section - Redesigned -->
+    <div id="supportpage">
+        <div class="section-header">
+            <div class="section-icon">🛠️</div>
+            <h2>Support & Resources</h2>
+            <p>We're here to help you succeed with your digital projects</p>
+        </div>
+        
+        <div class="support-container">
+            <div class="support-info">
+                <div class="support-card">
+                    <div class="support-icon">📚</div>
+                    <h3>Knowledge Base</h3>
+                    <p>Access our comprehensive guides, tutorials, and best practices for web design, development, and digital marketing.</p>
+                    <ul>
+                        <li>Web Design Guidelines</li>
+                        <li>Development Best Practices</li>
+                        <li>SEO Optimization Tips</li>
+                        <li>Marketing Strategies</li>
+                    </ul>
+                </div>
+                
+                <div class="support-card">
+                    <div class="support-icon">🔧</div>
+                    <h3>Technical Support</h3>
+                    <p>Get expert technical assistance for your projects, troubleshooting, and implementation guidance.</p>
+                    <ul>
+                        <li>Project Consultation</li>
+                        <li>Technical Troubleshooting</li>
+                        <li>Performance Optimization</li>
+                        <li>Security Audits</li>
+                    </ul>
+                </div>
+                
+                <div class="support-card">
+                    <div class="support-icon">📞</div>
+                    <h3>Direct Contact</h3>
+                    <p>Reach out to our team directly for immediate assistance and personalized support.</p>
+                    <div class="contact-highlight">
+                        <div class="contact-method">
+                            <strong>📞 Phone Support:</strong><br>
+                            0321-470-8525<br>
+                            0345-547-2822
+                        </div>
+                        <div class="contact-method">
+                            <strong>📧 Email Support:</strong><br>
+                            ask@mastergraphiks.com
+                        </div>
+                        <div class="contact-method">
+                            <strong>⏰ Response Time:</strong><br>
+                            Within 2-4 hours
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="support-cta">
+                <div class="cta-card">
+                    <h3>Need Immediate Help?</h3>
+                    <p>If you have an urgent issue or need quick assistance, don't hesitate to call us directly.</p>
+                    <div class="cta-actions">
+                        <a href="tel:0321-470-8525" class="btn btn-primary">
+                            <span class="btn-icon">📞</span>
+                            <span class="btn-text">Call Now</span>
+                        </a>
+                        <a href="mailto:ask@mastergraphiks.com" class="btn btn-secondary">
+                            <span class="btn-icon">📧</span>
+                            <span class="btn-text">Email Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="copyright">
+        &copy; MasterGraphiks.com 2024. All Rights Reserved
+    </div>
 </body>
 </html>
